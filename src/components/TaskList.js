@@ -1,9 +1,9 @@
 import React from "react";
 import Task from "./Task"
 
-function TaskList( {tasksList} ) {
+function TaskList( { tasks } ) {
 
-  const tasks = tasksList.map((task) => (
+  const taskList = tasks.map((task) => (
     <Task 
     key={task.text}
     text={task.text} 
@@ -13,7 +13,7 @@ function TaskList( {tasksList} ) {
   return (
     
     <div className="tasks">
-      {tasks} 
+      {taskList} 
     </div>
   );
 }
